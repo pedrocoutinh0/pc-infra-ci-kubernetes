@@ -19,7 +19,7 @@ spec:
     
       containers: 
        - name: nest
-         image: leonardosartorello/go_ci:23 
+         image: default 
          ports:
           - containerPort: 3000
          env:
