@@ -23,7 +23,7 @@ provider "kubernetes" {
   }
 }
 
-resource "kubernetes_service" "LoadBalancer" {
+resource "kubernetes_service" "lb" {
   metadata {
     name = "load-balancer-nest-api"
   }

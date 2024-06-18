@@ -11,7 +11,7 @@ resource "aws_db_instance" "default" {
   vpc_security_group_ids = [aws_security_group.db.id]
 
   provisioner "local-exec" {
-    command = "mysql -h ${self.address} -u ${self.username} -p'${self.password}' < ./script.sql"
+    command = "mysql -h ${self.address} -u ${self.username} -p'${self.password}' -e 'CREATE DATABASE finance;'"
   }
 }
 
