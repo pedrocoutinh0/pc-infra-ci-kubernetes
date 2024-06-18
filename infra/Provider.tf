@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "sa-east-1"
 }
 
 provider "kubernetes" {

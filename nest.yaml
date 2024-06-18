@@ -23,36 +23,36 @@ spec:
          ports:
           - containerPort: 3000
          env:
-           - name: HOST
+           - name: DB_HOST
              valueFrom:
               secretKeyRef:
                 name: dbhost
                 key: HOST
-           - name: DBPORT
+           - name: DB_PORT
              valueFrom:
               secretKeyRef:
                 name: dbport
                 key: DBPORT
-           - name: USER
+           - name: DB_USERNAME
              valueFrom:
               secretKeyRef:
                 name: dbuser
                 key: USER
-           - name: PASSWORD
+           - name: DB_PASSWORD
              valueFrom:
               secretKeyRef:
                 name: dbpassword
                 key: PASSWORD
-           - name: DBNAME
+           - name: DB_DATABASE
              valueFrom:
               secretKeyRef:
                 name: dbname
                 key: DBNAME
-           - name: PORT
+           - name: JWT_SECRET
              valueFrom:
               secretKeyRef:
-                name: port
-                key: PORT
+                name: jwt
+                key: JWTSECRET
          livenessProbe:
            httpGet:
              path: /health

@@ -1,7 +1,7 @@
 module "prod" {
     source = "../../infra"
     
-    cluster_name = "homolog2"
+    cluster_name = "eks-cluster"
 }
 
 output "IP_db" {
