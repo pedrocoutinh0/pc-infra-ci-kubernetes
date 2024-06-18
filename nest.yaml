@@ -53,6 +53,22 @@ spec:
               secretKeyRef:
                 name: jwt
                 key: JWTSECRET
+           - name: ADMIN_USERNAME
+             valueFrom:
+              secretKeyRef:
+                name: adminuser
+                key: ADMINUSER
+           - name: ADMIN_PASSWORD
+             valueFrom:
+              secretKeyRef:
+                name: adminpass
+                key: ADMINPASS
+           - name: ADMIN_EMAIL
+             valueFrom:
+              secretKeyRef:
+                name: adminemail
+                key: ADMINEMAIL
+            
          livenessProbe:
            httpGet:
              path: /health
