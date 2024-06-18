@@ -9,7 +9,7 @@ module "eks" {
   subnet_ids = module.vpc.public_subnets
 
   eks_managed_node_groups = {
-    alura = {
+    finance_nest_app = {
       min_size     = 1
       max_size     = 10
       desired_size = 3

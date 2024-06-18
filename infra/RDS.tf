@@ -1,6 +1,6 @@
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
-  db_name              = "db-finance"
+  db_name              = "dbfinance"
   engine               = "mariadb"
   instance_class       = "db.t3.micro"
   username             = "admin"
